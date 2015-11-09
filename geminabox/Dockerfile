@@ -1,6 +1,7 @@
 # Inspired by https://github.com/chulkilee/geminabox-docker/
 
-FROM ruby:2.2.3
+FROM rcook/ruby
+MAINTAINER Richard Cook <rcook@rcook.org>
 
 ENV APP_HOME /opt/geminabox
 
