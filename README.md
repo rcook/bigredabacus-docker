@@ -9,19 +9,19 @@ The following steps describe a Rails app with the following features:
 * Recent Unicorn/Foreman/nginx
 * Geminabox-based Rubygems proxy to speed up deployment
 
-### Create `rcook/geminabox` image
-
-```bash
-$ pushd geminabox
-$ docker build -t rcook/geminabox .
-$ popd
-```
-
 ### Create `rcook/ruby` image
 
 ```bash
 $ pushd ruby
 $ docker build -t rcook/ruby .
+$ popd
+```
+
+### Create `rcook/geminabox` image
+
+```bash
+$ pushd geminabox
+$ docker build -t rcook/geminabox .
 $ popd
 ```
 
