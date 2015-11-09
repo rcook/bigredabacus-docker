@@ -1,0 +1,9 @@
+#!/bin/bash
+pushd ruby
+make
+popd
+
+pushd geminabox
+make
+popd
+
