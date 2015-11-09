@@ -11,6 +11,12 @@ The following steps describe a Rails app with the following features:
 
 ### Create `rcook/geminabox` image
 
+```bash
+$ pushd geminabox
+$ docker build -t rcook/geminabox .
+$ popd
+```
+
 ### Create `rcook/ruby` image
 
 ```bash
