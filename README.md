@@ -2,6 +2,15 @@
 
 ## Basic usage
 
+The following steps describe a Rails app with the following features:
+
+* Recent Ruby
+* Recent Rails
+* Recent Unicorn/Foreman/nginx
+* Geminabox-based Rubygems proxy to speed up deployment
+
+### Create `rcook/geminabox` image
+
 ### Create `rcook/ruby` image
 
 ```bash
