@@ -9,6 +9,14 @@ The following steps describe a Rails app with the following features:
 * Recent Unicorn/Foreman/nginx
 * Geminabox-based Rubygems proxy to speed up deployment
 
+### Create `rcook/squid-deb-proxy` image
+
+```bash
+$ pushd squid-deb-proxy
+$ docker build -t rcook/squid-deb-proxy .
+$ popd
+```
+
 ### Create `rcook/ruby` image
 
 ```bash
