@@ -6,6 +6,15 @@ if [ $? -ne 0 ]; then
 fi
 popd
 
+pushd ruby
+make
+if [ $? -ne 0 ]; then
+  exit 1
+fi
+popd
+
+exit 0
+
 pushd squid-deb-proxy
 make
 if [ $? -ne 0 ]; then
@@ -21,13 +30,6 @@ fi
 popd
 
 exit 0
-
-pushd ruby
-make
-if [ $? -ne 0 ]; then
-  exit 1
-fi
-popd
 
 pushd rails-nginx-unicorn
 make
