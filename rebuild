@@ -1,4 +1,11 @@
 #!/bin/bash
+pushd ubuntu
+make
+if [ $? -ne 0 ]; then
+  exit 1
+fi
+popd
+
 pushd squid-deb-proxy
 make
 if [ $? -ne 0 ]; then
