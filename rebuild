@@ -1,16 +1,11 @@
 #!/bin/bash
 pushd squid-deb-proxy > /dev/null
-make
-if [ $? -ne 0 ]; then
-  exit 1
-fi
+make || exit 1
+make run || exit 1
 popd > /dev/null
 
 pushd ubuntu > /dev/null
-make
-if [ $? -ne 0 ]; then
-  exit 1
-fi
+make || exit 1
 popd > /dev/null
 
 exit 0

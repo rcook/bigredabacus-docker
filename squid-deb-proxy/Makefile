@@ -4,5 +4,5 @@ default:
 	docker build -t rcook/squid-deb-proxy .
 
 run:
-	docker run --name proxy -d -v $(DATADIR):/cachedir -p 8000:8000 rcook/squid-deb-proxy
+	docker run -d -v $(DATADIR):/cachedir -p 8000:8000 rcook/squid-deb-proxy
 
