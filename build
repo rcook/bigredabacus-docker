@@ -1,17 +1,13 @@
 #!/bin/bash
-pushd rails-nginx-unicorn
-make
-if [ $? -ne 0 ]; then
-  exit 1
-fi
-popd
+echo rails-nginx-unicorn
+pushd rails-nginx-unicorn > /dev/null
+make || exit 1
+popd > /dev/null
 
 exit 0
 
-pushd testapp
-make
-if [ $? -ne 0 ]; then
-  exit 1
-fi
-popd
+echo testapp
+pushd testapp > /dev/null
+make || exit 1
+popd > /dev/null
 
