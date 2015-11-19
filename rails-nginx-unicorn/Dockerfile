@@ -21,14 +21,16 @@ RUN chown -R www-data:www-data /var/lib/nginx
 # Add default nginx config
 ADD nginx-sites.conf /etc/nginx/sites-enabled/default
 
-# Install Foreman
-RUN gem install foreman
+# Update Bundler sources and install Foreman
+RUN gem sources --remove https://rubygems.org/ && \
+  gem sources --add http://$(cat /tmp/host_ip.txt):4444 && \
+  gem install foreman
 
 # Install the latest postgresql lib for pg gem
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
-    apt-get update && \
-    DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y --force-yes libpq-dev
+  apt-get update && \
+  DEBIAN_FRONTEND=noninteractive \
+  apt-get install -y --force-yes libpq-dev
 
 # Install Rails App
 WORKDIR /app
