@@ -27,7 +27,11 @@ RUN gem sources --remove https://rubygems.org/ && \
   gem install foreman
 
 # Install the latest postgresql lib for pg gem
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
+RUN apt-get install \
+  ca-certificates \
+  wget && \
+  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
+  echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive \
   apt-get install -y --force-yes libpq-dev
