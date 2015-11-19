@@ -1,5 +1,6 @@
 ppa.launchpad.net                       # Foreign PPA
 private-ppa.launchpad.net
+apt.postgresql.org                      # PostgreSQL
 #download.virtualbox.org                 # Oracle VM
 #dl.bintray.com                          # Vagrant et al
 #releases.ansible.com                    # Ansible
