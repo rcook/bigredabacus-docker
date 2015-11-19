@@ -1,0 +1,12 @@
+#!/bin/bash
+echo squid-deb-proxy
+pushd squid-deb-proxy > /dev/null
+make || exit 1
+make run || exit 1
+popd > /dev/null
+
+echo ubuntu
+pushd ubuntu > /dev/null
+make || exit 1
+popd > /dev/null
+
