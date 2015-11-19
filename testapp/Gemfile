@@ -1,4 +1,4 @@
-source "http:#{File.read("/tmp/host_ip.txt").strip}:4444/"
+source "http://#{File.read("/tmp/host_ip.txt").strip}:4444/"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
