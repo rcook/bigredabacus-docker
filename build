@@ -4,13 +4,13 @@
 #make || exit 1
 #popd > /dev/null
 
-#echo testapp
-#pushd testapp > /dev/null
+#echo db
+#pushd db > /dev/null
 #make || exit 1
 #popd > /dev/null
 
-echo db
-pushd db > /dev/null
+echo testapp
+pushd testapp > /dev/null
 make || exit 1
 popd > /dev/null
 
