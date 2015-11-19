@@ -1,26 +1,12 @@
 #!/bin/bash
-echo ruby
-pushd ruby > /dev/null
-make || exit 1
-popd > /dev/null
-
-exit 0
-
-pushd geminabox
-make
-if [ $? -ne 0 ]; then
-  exit 1
-fi
-popd
-
-exit 0
-
 pushd rails-nginx-unicorn
 make
 if [ $? -ne 0 ]; then
   exit 1
 fi
 popd
+
+exit 0
 
 pushd testapp
 make

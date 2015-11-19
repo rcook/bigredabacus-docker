@@ -1,0 +1,12 @@
+#!/bin/bash
+echo ruby
+pushd ruby > /dev/null
+make || exit 1
+popd > /dev/null
+
+echo geminabox
+pushd geminabox > /dev/null
+make || exit 1
+make run || exit 1
+popd > /dev/null
+
