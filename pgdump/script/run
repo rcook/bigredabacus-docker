@@ -1,0 +1,3 @@
+#!/bin/bash
+docker run -it --link db -e PGPASSWORD=postgres rcook/pgdump -U postgres -h db
+
