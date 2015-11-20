@@ -1,0 +1,3 @@
+#!/bin/bash
+docker run --link db -it --rm -e SECRET_KEY_BASE=secretkey rcook/testapp sh -c 'bundle exec rake db:create db:migrate'
+
